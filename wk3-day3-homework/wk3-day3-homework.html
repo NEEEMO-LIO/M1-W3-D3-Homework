@@ -58,8 +58,8 @@
 <script>
 
   function squareNumber(num) {
-      var squaredNumber = num * num;
-      document.getElementById("solution").innerHTML = 'The result of half the number ' + num + ' is ' + halfdNumber;
+      var squareNumber = num * num;
+      document.getElementById("solution").innerHTML = 'The result of squaring the number ' + num + ' is ' + squareNumber;
   }
       
   var squareButton = document.getElementById("square-button");
@@ -93,7 +93,7 @@ var percentButton = document.getElementById("percent-button");
 percentButton.addEventListener("click", function() {
     var fraction = document.getElementById('percent1-input').value; 
     var whole = document.getElementById('percent2-input').value; 
-    if (fraction || whole || whole === 0) {
+    if (fraction == 0 || whole == 0) {
         document.getElementById('solution').innerHTML = 'Please enter valid numbers.';
     } else {
         calculatePercentage(fraction, whole);
